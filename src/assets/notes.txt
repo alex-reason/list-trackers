@@ -1,0 +1,85 @@
+previous code from ExpenseForm.js
+
+// import { useDispatch, useSelector } from "react-redux";
+// import { changeName, changeCost, addExpense } from "../../store";
+// import Form from "../utils/Form";
+
+// const ExpenseForm = () => {
+//     const dispatch = useDispatch();
+
+//     const { name, cost } = useSelector(state => {
+//         return {
+//             name: state.form.name,
+//             cost: state.form.cost
+//         }
+//     });
+
+//     const handleNameChange = (event) => {
+//         dispatch(changeName(event.target.value))
+//     };
+
+//     const handleCostChange = (event) => {
+//         const expenseCost = parseFloat(event.target.value) || 0;
+//         dispatch(changeCost(expenseCost))
+//     };
+
+//     const handleSubmit = (event) => {
+//         event.preventDefault();
+//         dispatch(addExpense({ name, cost }))
+//     };
+
+//     const renderedInputs = (
+//         <>
+//             <div className="form__name">
+//                 <label>Name</label>
+//                 <input value={name} onChange={handleNameChange} />
+//             </div>
+//             <div className="form__cost">
+//                 <label>Cost</label>
+//                 <input type="number" step="0.01" value={cost || ''} onChange={handleCostChange} />
+//             </div>
+//         </>
+//     );
+
+//     return (
+//         <Form handleSubmit={handleSubmit} inputs={renderedInputs}/>
+//     )
+// };
+
+// export default ExpenseForm;
+
+
+previous code for TaskCreate.js
+// import { useDispatch, useSelector } from "react-redux";
+// import { changeTaskName, addTask } from "../../store";
+// import Form from "../utils/Form";
+
+// const TaskCreate = () => {
+//     const dispatch = useDispatch();
+
+//     const { title } = useSelector(state => {
+//         return { title: state.input.title }
+//     });
+
+//     const handleNameChange = (event) => {
+//         dispatch(changeTaskName(event.target.value))
+//     };
+
+//     const handleSubmit = (event) => {
+//         event.preventDefault();
+//         dispatch(addTask({ title }))
+//     };
+
+//     const renderedInput = (
+//         <div className="form__name">
+//             <label>Name</label>
+//             <input value={title} onChange={handleNameChange} />
+//         </div>
+//     );
+
+//     return (
+//         <Form handleSubmit={handleSubmit} inputs={renderedInput}/>
+//     )
+// };
+
+// export default TaskCreate;

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Title from "./pages/Title";
+import ExpensesListPage from "./pages/ExpensesListPage";
+import TasksListPage from "./pages/TasksListPage";
+import "./index.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [display, setDisplay] = useState("expenses");
+
+    const handleClick = (item) => {
+        setDisplay(item)
+    };
+
+    return (
+        <div className="app">
+            <div className="app__container">
+                <Title />
+                <div className="app__content">
+                    {display === "expenses" ? <ExpensesListPage /> : <TasksListPage />}
+                </div>
+            </div>
+
+            <div className="app__menu">
+                <h3 onClick={() => handleClick("expenses")}>Expenses List</h3>
+                <h3 onClick={() => handleClick("tasks")}>Tasks List</h3>
+            </div>
+        </div>
+    )
+};
 
 export default App;
