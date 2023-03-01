@@ -10,7 +10,7 @@ const ExpensesListPage = () => {
                 <h1>Expenses List</h1>
                 <p>Add items and respective costs to the list.</p>
                 <p>
-                    Filter the list with the search bar to find only the items you need.
+                    Filter the list with the search bar to find only the items you need through search terms.
                 </p>
                 <p>
                     If an item you are about to add is on the list already, it will be highlighted.

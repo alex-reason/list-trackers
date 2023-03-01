@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
 
 $color-1: #272727;
-$color-2: #B1E1FF;
-$color-3: #f8f7f7;
-$color-4: #A66CFF;
-$color-5: #FFEBC1;
-$color-6: #f59c53;
-$color-check: #C4DFAA;
+$color-2: #F0EBE3;
+$color-3: #FFFFFF;
+$color-4: #888888;
+$color-5: #F0F0F0;
+$color-6: #FFD369;
+$color-7: #6995FF;
 $shadow: 5px 7px 9px -5px rgba(117, 117, 117, 0.74);
 
 $screen-lg: 1470px;
 $screen-md: 1200px;
 $screen-sm: 960px;
 $screen-xs: 600px;
-
 
 *,
 *::before,
@@ -75,7 +74,7 @@ $screen-xs: 600px;
             cursor: pointer;
 
             &:hover {
-                color: $color-4;
+                font-weight: 800;
             }
         }
     }
@@ -165,10 +164,10 @@ $screen-xs: 600px;
 }
 
 .button {
-    padding: .5rem 1rem;
+    padding: .2rem 1rem;
     border: none;
     border-radius: 5px;
-    background-color: $color-2;
+    background-color: #fff;
     font-family: 'Sofia Sans Condensed', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -187,7 +186,7 @@ svg {
     color: $color-1;
 
     &:hover {
-        color: $color-4;
+        color: $color-7;
     }
 }
 
@@ -216,13 +215,14 @@ input {
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-
+     
         @media screen and (max-width: $screen-md) {
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-between;
+            // flex-direction: column;
+            // align-items: flex-start;
+            // justify-content: space-between;
+            align-items: center;
         }
-
+        
         @media screen and (max-width: $screen-sm) {
             flex-direction: row;
             align-items: center;
@@ -242,8 +242,10 @@ input {
         margin-right: 1rem;
 
         @media screen and (max-width: $screen-md) {
-            margin-right: 0;
-            margin-bottom: 1rem;
+            // margin-right: 0;
+            // margin-bottom: 1rem;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         @media screen and (max-width: $screen-sm) {
@@ -289,7 +291,7 @@ input {
         font-size: 1.5rem;
         letter-spacing: .1rem;
         color: $color-1;
-        background-color: $color-check;
+        background-color: $color-5;
         box-shadow: $shadow;
         border-radius: 5px;
 
@@ -347,7 +349,7 @@ input {
         button {
             display: flex;
             align-items: center;
-            background-color: $color-check;
+            background-color: $color-5;
             outline: none;
             border: none;
         }
